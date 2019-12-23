@@ -1,0 +1,162 @@
+:root{
+    --primary: #EE5253;
+}
+
+/* Default style */
+html{
+    /* Untuk projek ini, 1rem = 10px */
+    font-size: 62.5%; 
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+}
+
+dl, ol, ul {
+    margin-bottom: 0rem;
+}
+
+a{
+    color: inherit;
+    font-weight: 500;
+}
+
+a:hover{
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+input:focus, textarea:focus, button:focus{
+    outline: none;
+    border: 0.1rem solid black;
+}
+
+input[type=text]{
+    padding: 1rem 2rem;
+    border-radius: 0.4rem;
+    border: 0.1rem solid lightgray;
+    box-sizing: border-box;
+}
+
+button{
+    padding: 1rem;
+    background: var(--primary);
+    color: white;
+    border: 1px solid lightgray;
+    box-sizing: border-box;
+    border-radius: 0.4rem;
+}
+
+/* END Default style */
+
+/* Utilities */
+
+
+/* END Utilities */
+
+/* Sidenav */
+nav.sidenav{
+    box-sizing: border-box;
+    height: 100vh;
+    background: white;
+    box-shadow: 0.3rem 0 0.4rem 0.01rem rgba(0, 0, 0, 0.192);
+}
+
+.sidenav {
+    padding: 3.5rem 0 8.5rem 2rem;
+}
+
+.sidenav a{
+    display: block;
+    width: 100%;
+}
+
+.sidenav-logo{
+    margin-bottom: 3.5rem;
+}
+
+.sidenav-logo img{
+    width: 19rem;
+}
+
+.sidenav-link{
+    overflow-y: auto;
+    height: 100%;
+}
+
+.sidenav-link a{
+    padding: 1.4rem 1rem 1.4rem 0;
+    padding-left: 0;
+    transition: padding-left 200ms ease-out, background-color 200ms ease-out;
+    -webkit-transition: padding-left 200ms ease-out, background-color 200ms ease-out;
+}
+
+.sidenav-link a:hover{
+    padding-left: 2rem;
+    background-color: lightgray;
+}
+
+.side-link li:last-child{
+    background-color: red;
+}
+
+/* END Sidenav */
+
+/* Nav */
+nav.nav{
+    padding: 4.5rem 0 3.5rem 4.5rem;
+    display: grid;
+    grid-template-columns: 10fr 1fr;
+}
+
+.input-search{
+    display: grid;
+    grid-template-columns: 10fr 1fr;
+}
+
+.input-search input[type=text]{
+    padding: 0.6rem 2rem;
+    border-radius: 0.4rem 0 0 0.4rem;
+    width: 100%;
+    border-right: none;
+    box-shadow: 0 0 0.4rem 0.01rem rgba(0, 0, 0, 0.192);
+}
+
+.input-search input[type=text]:focus{
+    border: 0.1rem solid black;
+}
+
+.input-search button{
+    padding: 0.6rem;
+    background: white;
+    border-radius: 0 0.4rem 0.4rem 0;
+    font-size: 1.8rem;
+    color: gray;
+    border: 1px solid lightgray;
+    box-shadow: 0 0 0.4rem 0.01rem rgba(0, 0, 0, 0.192);
+    border-left: none; /* Prevent double borders */
+}
+
+.menu{
+    align-self: center;
+    justify-self: end;
+}
+
+.menu button{
+    background: none;
+    padding: 0.6rem;
+    font-size: 2rem;
+    border: none;
+    color: gray;
+}
+
+/* END Nav */
+
+/* Content */
+.content{
+    padding: 0 0 7rem 4.5rem;
+}
+
+/* END Content */
