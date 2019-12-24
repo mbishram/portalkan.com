@@ -12,6 +12,7 @@ html{
 body{
     font-family: 'Roboto', sans-serif;
     font-size: 1.5rem;
+    color: black;
 }
 
 dl, ol, ul {
@@ -107,8 +108,11 @@ nav.sidenav{
 .sidenav-link a{
     padding: 1.4rem 1rem 1.4rem 0;
     padding-left: 0;
-    transition: padding-left 200ms ease-out, background-color 200ms ease-out;
     -webkit-transition: padding-left 200ms ease-out, background-color 200ms ease-out;
+    -moz-transition: padding-left 200ms ease-out, background-color 200ms ease-out;
+    -ms-transition: padding-left 200ms ease-out, background-color 200ms ease-out;
+    -o-transition: padding-left 200ms ease-out, background-color 200ms ease-out;
+    transition: padding-left 200ms ease-out, background-color 200ms ease-out;
 }
 
 .sidenav-link a:hover{
@@ -227,11 +231,12 @@ nav.nav{
 /* Content */
 .content{
     padding: 0 0 7rem 4.5rem;
+    overflow: hidden;
 }
 
 .content h1{
     font-size: 2.2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 3.5rem;
 }
 
 .content .icon-content{
@@ -243,7 +248,7 @@ nav.nav{
 }
 
 .portal-link h2{
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-bottom: 2rem;
 }
 
@@ -261,9 +266,112 @@ nav.nav{
 
 /* END Content */
 
+
+/* SEARCH HTML */
+/* Result */
+.results{
+    display: grid;
+    gap: 3.5rem;
+    margin-top: 3.5rem;
+}
+
+.result-img{
+    position: relative;
+    color: white;
+}
+
+.result-img>img{
+    width: 100%;
+    height: 36.1rem;
+    border-radius: 1.8rem;
+    background-color: white;
+    box-shadow: 0 0 0.8rem 0.1rem rgba(0, 0, 0, 0.192);
+}
+
+.result-img .result-img-hover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    border-radius: 1.8rem;
+    opacity: 0;
+    -webkit-transition: opacity .3s ease-out;
+    -moz-transition: opacity .3s ease-out;
+    -ms-transition: opacity .3s ease-out;
+    -o-transition: opacity .3s ease-out;
+    transition: opacity .3s ease-out;
+}
+
+.result-img-hover a{
+    opacity: 1;
+    font-weight: 300;
+}
+
+.result-img-hover a:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+.img-btn a{
+    font-size: 2.6rem;
+    padding: 0.5rem;
+    margin: 0.6rem;
+    -webkit-transition: border-bottom .2s ease-out;
+    -moz-transition: border-bottom .2s ease-out;
+    -ms-transition: border-bottom .2s ease-out;
+    -o-transition: border-bottom .2s ease-out;
+    transition: border-bottom .2s ease-out;
+}
+
+.img-btn a:hover{
+    border-bottom: 0.2rem solid white;
+}
+
+.img-link{
+    height: 1.8rem;
+    margin-right: 0.8rem;
+}
+
+.img-btn{
+    position: absolute;
+    bottom: calc(50% - 1.6rem);
+    right: calc(50% - 4.8rem);
+}
+
+.img-link-3{
+    position: absolute;
+    font-size: 1.4rem;
+    bottom: 1.2rem;
+    left: 1.8rem;
+}
+
+.result-img .result-img-hover:hover{
+    opacity: .75;
+}
+
+.result .result-name{
+    margin-top: 1.2rem;
+}
+
+/* END Result */
+/* END SEARCH HTML */
+
+
 @media (min-width: 992px){
     .portal-link{
         width: calc(33.33% - 2.5rem);
         margin-bottom: 2.5rem;
+    }
+
+    .results{
+        width: 64rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .result-img>img{
+        height: 17.6rem;
     }
 }
