@@ -59,6 +59,10 @@ em{
     font-style: oblique;
 }
 
+h1{
+    line-height: 1.5em;
+}
+
 /* END Default style */
 
 /* Bootstrap Edit */
@@ -93,9 +97,6 @@ nav.sidenav{
     height: 100vh;
     background: white;
     box-shadow: 0.3rem 0 0.4rem 0.01rem rgba(0, 0, 0, 0.192);
-}
-
-.sidenav {
     padding: 3.5rem 0 8.5rem 2rem;
 }
 
@@ -108,13 +109,17 @@ nav.sidenav{
     margin-bottom: 3.5rem;
 }
 
-.sidenav-logo img{
-    width: 19rem;
+.sidenav .sidenav-logo img{
+    width: 81%;
 }
 
 .sidenav-link{
     overflow-y: auto;
     height: 100%;
+}
+
+.sidenav-link li, .sidenav-link a{
+    overflow: hidden;
 }
 
 .sidenav-link a{
@@ -136,6 +141,82 @@ nav.sidenav{
     background-color: red;
 }
 
+/* Sidenav Mobile */
+/* Closed */
+nav.sidenav-mobile{
+    overflow: hidden;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    width: 7rem;
+    height: 100vh;
+    background: white;
+    box-shadow: 0.3rem 0 0.4rem 0.01rem rgba(0, 0, 0, 0.192);
+    padding: 2rem 0 14.3rem 2rem;
+    transition: all .4s ease-out;
+}
+
+.sidenav-mobile .sidenav-logo{
+    margin-bottom: 1.4rem;
+}
+
+.sidenav-mobile .sidenav-logo img{
+    height: 5.3rem;
+}
+
+.sidenav-mobile .sidenav-link{
+    display: none;
+    margin-left: -19.5rem;
+}
+
+.sidenav-mobile a{
+    display: block;
+    width: 30rem;
+}
+
+.sidenav-mobile button{
+    background: none;
+    background-image: url(../images/icon/nav-button.svg);
+    background-size: 4rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 3rem;
+    width: 3.5rem;
+    margin: 0.5rem;
+    border: none;
+    margin-left: -0.4rem;
+    position: fixed;
+    bottom: 1.4rem;
+    left: 2rem;
+}
+
+/* Open */
+nav.sidenav-mobile.open{
+    width: 26.5rem;
+}
+
+.sidenav-mobile.open .sidenav-link{
+    display: block;
+    margin-left: 0;
+}
+
+.sidenav-mobile.open button{
+    background: none;
+    background-image: url(../images/icon/nav-button.svg);
+    background-size: 4rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 3rem;
+    width: 3.5rem;
+    margin: 0.5rem;
+    border: none;
+    margin-top: 2.2rem;
+    margin-left: -0.4rem;
+}
+
+/* END Sidenav Mobile */
 /* END Sidenav */
 
 /* Nav */
@@ -166,7 +247,7 @@ nav.nav{
     padding: 0.6rem;
     background: white;
     border-radius: 0 0.4rem 0.4rem 0;
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     color: var(--gray);
     border: 1px solid lightgray;
     box-shadow: 0 0 0.4rem 0.01rem rgba(0, 0, 0, 0.192);
@@ -182,13 +263,13 @@ nav.nav{
 .menu button{
     background: none;
     background-image: url(../images/icon/nav-button.svg);
+    background-size: 4rem;
     background-repeat: no-repeat;
     background-position: center;
     height: 3rem;
     width: 3.5rem;
     margin: 0.5rem;
     border: none;
-    color: gray;
 }
 
 .menu-content{
@@ -270,6 +351,7 @@ nav.nav{
 
 .portal-link{
     width: 100%;
+    margin-bottom: 2.5rem;
 }
 
 .portal-link h2{
@@ -277,8 +359,11 @@ nav.nav{
     margin-bottom: 2rem;
 }
 
-.portal-link li{
+.portal-link li a{
     margin-bottom: 1.4rem;
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+    align-items: center;
 }
 
 .portal-link a{
@@ -298,6 +383,7 @@ nav.nav{
     display: grid;
     gap: 3.5rem;
     margin-top: 3.5rem;
+    width: 98%;
 }
 
 .result-img{
@@ -307,7 +393,6 @@ nav.nav{
 
 .result-img>img{
     width: 100%;
-    height: 36.1rem;
     border-radius: 1.8rem;
     background-color: white;
     box-shadow: 0 0 0.8rem 0.1rem rgba(0, 0, 0, 0.192);
@@ -356,7 +441,6 @@ nav.nav{
 }
 
 .img-link{
-    height: 1.8rem;
     margin-right: 0.8rem;
 }
 
@@ -405,13 +489,19 @@ nav.nav{
 }
 
 .details .details-img{
-    width: 60rem;
-    margin-bottom: 3rem;
+    width: 85%;
+    margin-bottom: 3.5rem;
 }
 
 /* END Title */
 /* END DETAILS HTML */
 
+@media (min-width: 576px){
+    .portal-link{
+        width: calc(50% - 2.5rem);
+        margin-bottom: 2.5rem;
+    }
+}
 
 @media (min-width: 992px){
     .portal-link{
@@ -423,8 +513,26 @@ nav.nav{
         width: 64rem;
         grid-template-columns: repeat(2, 1fr);
     }
+    
+    .sidenav-mobile{
+        display:none
+    }
+}
 
-    .result-img>img{
-        height: 17.6rem;
+@media (max-width: 992px){
+    body{
+        font-size: 1.8rem;
+    }
+
+    nav.sidenav{
+        display: none;
+    }
+
+    nav.nav, .content{
+        padding-left: 0;
+    }
+    
+    .row{
+        margin-left: 7rem;
     }
 }
