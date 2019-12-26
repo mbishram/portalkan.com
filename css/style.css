@@ -51,6 +51,14 @@ button{
     border-radius: 0.4rem;
 }
 
+strong{
+    font-weight: 700;
+}
+
+em{
+    font-style: oblique;
+}
+
 /* END Default style */
 
 /* Bootstrap Edit */
@@ -65,12 +73,16 @@ button{
 
 .logo-link{
     height: 2rem;
-    margin-right: 0.6rem;
+    margin-right: 1rem;
 }
 
 .selected{
     color: var(--primary);
     font-weight: 700;
+}
+
+.color-primary{
+    color: var(--primary);
 }
 
 /* END Utilities */
@@ -158,7 +170,7 @@ nav.nav{
     color: var(--gray);
     border: 1px solid lightgray;
     box-shadow: 0 0 0.4rem 0.01rem rgba(0, 0, 0, 0.192);
-    border-left: none; /* Prevent double borders */
+    border-left: none;
 }
 
 .menu{
@@ -169,7 +181,7 @@ nav.nav{
 
 .menu button{
     background: none;
-    background-image: url(../images/icon/nav-button.png);
+    background-image: url(../images/icon/nav-button.svg);
     background-repeat: no-repeat;
     background-position: center;
     height: 3rem;
@@ -198,10 +210,20 @@ nav.nav{
     transform: scaleX(2);
     font-size: 2rem;
     left: 83%;
-    top: -2.28rem;
+    top: -2.26rem;
     color: white;
     text-shadow: 0  0 0.4rem rgba(0, 0, 0, 0.192);
-    z-index: -10;
+}
+
+.menu-content::after{
+    content: "";
+    position: absolute;
+    width: 4rem;
+    height: 1rem;
+    left: 79%;
+    top: 0;
+    background: white;
+    text-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.192);
 }
 
 .menu-content h1{
@@ -234,9 +256,12 @@ nav.nav{
     overflow: hidden;
 }
 
+.content .title{
+    margin-bottom: 3.5rem;
+}
+
 .content h1{
     font-size: 2.2rem;
-    margin-bottom: 3.5rem;
 }
 
 .content .icon-content{
@@ -358,6 +383,34 @@ nav.nav{
 
 /* END Result */
 /* END SEARCH HTML */
+
+
+/* DETAILS HTML */
+/* Title */
+.details .title h1{
+    margin-bottom: 1rem;
+}
+
+.details .title h1 i{
+    margin-left: 1.4rem;
+}
+
+.details .title .details-link{
+    font-weight: 300;
+}
+
+.details .title .details-link:hover{
+    color: black;
+    text-decoration: underline;
+}
+
+.details .details-img{
+    width: 60rem;
+    margin-bottom: 3rem;
+}
+
+/* END Title */
+/* END DETAILS HTML */
 
 
 @media (min-width: 992px){
