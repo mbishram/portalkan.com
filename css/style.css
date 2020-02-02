@@ -215,12 +215,12 @@ nav.sidenav-mobile.open{
 nav.nav{
     padding: 4.5rem 0 4rem 4.5rem;
     display: grid;
-    grid-template-columns: 10fr 1fr;
+    grid-template-columns: auto 6.1rem;
 }
 
 .input-search{
     display: grid;
-    grid-template-columns: 10fr 1fr;
+    grid-template-columns: auto 6.25rem;
 }
 
 .input-search input[type=text]{
