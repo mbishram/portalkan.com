@@ -97,7 +97,7 @@ nav.sidenav{
     height: 100vh;
     background: white;
     box-shadow: 0.3rem 0 0.4rem 0.01rem rgba(0, 0, 0, 0.192);
-    padding: 3.5rem 0 8.5rem 2rem;
+    padding: 3.5rem 0 9rem 2rem;
 }
 
 .sidenav a{
@@ -107,6 +107,7 @@ nav.sidenav{
 
 .sidenav-logo{
     margin-bottom: 3.5rem;
+    box-sizing: border-box;
 }
 
 .sidenav .sidenav-logo img{
@@ -487,6 +488,7 @@ nav.nav{
 /* END Title */
 /* END DETAILS HTML */
 
+/* Bootstrap Responsive */
 @media (min-width: 576px){
     .portal-link{
         width: calc(50% - 2.5rem);
@@ -508,6 +510,16 @@ nav.nav{
     .sidenav-mobile{
         display:none
     }
+
+    .container{
+        max-width: 93%;
+    }
+}
+
+@media (min-width: 1300px){
+    .container{
+        max-width: 1240px;
+    }
 }
 
 @media (max-width: 992px){
@@ -517,6 +529,7 @@ nav.nav{
 
     nav.sidenav{
         display: none;
+        margin-bottom: none;
     }
 
     nav.nav, .content{

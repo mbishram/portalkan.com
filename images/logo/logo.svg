@@ -1,0 +1,20 @@
+<svg id="logo" xmlns="http://www.w3.org/2000/svg" width="450" height="121" viewBox="0 0 450 121">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ee5253;
+        font-size: 103px;
+        font-family: Rockwell;
+      }
+
+      .cls-2 {
+        text-decoration: underline;
+      }
+
+      .cls-3 {
+        fill: #262626;
+      }
+    </style>
+  </defs>
+  <text id="Portalkan" class="cls-1" transform="translate(0 97)"><tspan class="cls-2" x="0" y="0">Portal</tspan><tspan class="cls-3" y="0">kan</tspan></text>
+</svg>

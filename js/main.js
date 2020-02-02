@@ -26,9 +26,9 @@ function toggleSidenav() {
 
     document.getElementById("sidenav-mobile").classList.toggle("open");
     if (sidenav.classList.contains('open')) {
-        sidenavImg.src= 'images/logo/logo.png';
+        sidenavImg.src= 'images/logo/logo.svg';
     } else {
-        sidenavImg.src= 'images/logo/logo-p.png';
+        sidenavImg.src= 'images/logo/logo-p.svg';
     }
 }
 

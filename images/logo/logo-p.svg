@@ -1,0 +1,13 @@
+<svg id="logo-p" xmlns="http://www.w3.org/2000/svg" width="60" height="121" viewBox="0 0 60 121">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ee5253;
+        font-size: 103px;
+        font-family: Rockwell;
+        text-decoration: underline;
+      }
+    </style>
+  </defs>
+  <text id="P" class="cls-1" transform="translate(0 97)"><tspan x="0" y="0">P</tspan></text>
+</svg>
