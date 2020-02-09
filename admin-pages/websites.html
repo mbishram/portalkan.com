@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Admin Portalkan | Database - Websites</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="../css/admin/sb-admin-2.min.css" rel="stylesheet">
+  <link href="../css/admin/edit.css" rel="stylesheet">
+  
+  <!-- Custom styles for this page -->
+  <link href="../vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <div class="sidebar-brand-icon">
+          <img src="../images/logo/logo-p-white.svg" alt="" class="logo-p">
+        </div>
+        <div class="sidebar-brand-text mx-3 mt-1">Portalkan</div>
+      </a>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0">
+
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Dashboard</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <!-- Heading -->
+      <div class="sidebar-heading">
+        Databases
+      </div>
+
+      <!-- Blogs -->
+      <li class="nav-item">
+        <a class="nav-link" href="blogs.html">
+          <i class="fas fa-fw fa-address-card"></i>
+          <span>Blogs</span></a>
+      </li>
+
+      <!-- Websites -->
+      <li class="nav-item active">
+        <a class="nav-link" href="websites.html">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Websites</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider d-none d-md-block">
+
+      <!-- Sidebar Toggler (Sidebar) -->
+      <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div>
+
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+          <!-- Sidebar Toggle (Topbar) -->
+          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+          </button>
+
+          <!-- Topbar Search -->
+          <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+            <div class="input-group">
+              <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <button class="btn btn-primary" type="button">
+                  <i class="fas fa-search fa-sm"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+
+          <!-- Topbar Navbar -->
+          <ul class="navbar-nav ml-auto">
+
+            <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+            <li class="nav-item dropdown no-arrow d-sm-none">
+              <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-search fa-fw"></i>
+              </a>
+              <!-- Dropdown - Messages -->
+              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
+                <form class="form-inline mr-auto w-100 navbar-search">
+                  <div class="input-group">
+                    <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                      <button class="btn btn-primary" type="button">
+                        <i class="fas fa-search fa-sm"></i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </li>
+
+            <div class="topbar-divider d-none d-sm-block"></div>
+
+            <!-- Nav Item - User Information -->
+            <li class="nav-item dropdown no-arrow">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Admin Portalkan</span>
+                <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
+              </a>
+              <!-- Dropdown - User Information -->
+              <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                  <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Logout
+                </a>
+              </div>
+            </li>
+
+          </ul>
+
+        </nav>
+        <!-- End of Topbar -->
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+          <!-- Page Heading -->
+          <h1 class="h3 mb-4 text-gray-800">Database - Websites</h1>
+
+          <!-- DataTales Example -->
+          <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary float-left mt-2">Websites</h6>
+              <a href="#" class="btn btn-primary float-right" data-toggle="modal" data-target="#createPostModal">Create Websites</a>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Link</th>
+                      <th>Description</th>
+                      <th>Logo</th>
+                      <th>Thumbnail</th>
+                      <th>Edit / Delete</th>
+                    </tr>
+                  </thead>
+                  <tfoot>
+                    <tr>
+                      <th>Name</th>
+                      <th>Link</th>
+                      <th>Description</th>
+                      <th>Logo</th>
+                      <th>Thumbnail</th>
+                      <th>Edit / Delete</th>
+                    </tr>
+                  </tfoot>
+                  <tbody>
+                    <tr>
+                      <td>Lorem Ipsum</td>
+                      <td><a href="https://www.lipsum.com/">https://www.lipsum.com/</a></td>
+                      <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium veritatis repudiandae, doloremque omnis laudantium eos atque similique et. Recusandae, labore...</td>
+                      <td class="text-center"><img src="../images/icon/top_world.svg" alt=""></td>
+                      <td class="text-center"><img src="/images/loremipsum.png" alt="" style="width: 10rem;"></td>
+                      <td><a href="#" class="btn btn-info m-1" data-toggle="modal" data-target="#editPostModal">Edit</a>
+                        <a href="#" class="btn btn-danger m-1" data-toggle="modal" data-target="#deleteModal">Delete</a></td>
+                    </tr>
+                    <tr>
+                      <td>Lorem Ipsum</td>
+                      <td><a href="https://www.lipsum.com/">https://www.lipsum.com/</a></td>
+                      <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium veritatis repudiandae, doloremque omnis laudantium eos atque similique et. Recusandae, labore...</td>
+                      <td class="text-center"><img src="../images/icon/top_world.svg" alt=""></td>
+                      <td class="text-center"><img src="/images/loremipsum.png" alt="" style="width: 10rem;"></td>
+                      <td><a href="#" class="btn btn-info m-1" data-toggle="modal" data-target="#editPostModal">Edit</a>
+                        <a href="#" class="btn btn-danger m-1" data-toggle="modal" data-target="#deleteModal">Delete</a></td>
+                    </tr>
+                    <tr>
+                      <td>Lorem Ipsum</td>
+                      <td><a href="https://www.lipsum.com/">https://www.lipsum.com/</a></td>
+                      <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium veritatis repudiandae, doloremque omnis laudantium eos atque similique et. Recusandae, labore...</td>
+                      <td class="text-center"><img src="../images/icon/top_world.svg" alt=""></td>
+                      <td class="text-center"><img src="/images/loremipsum.png" alt="" style="width: 10rem;"></td>
+                      <td><a href="#" class="btn btn-info m-1" data-toggle="modal" data-target="#editPostModal">Edit</a>
+                        <a href="#" class="btn btn-danger m-1" data-toggle="modal" data-target="#deleteModal">Delete</a></td>
+                    </tr>
+                    <tr>
+                      <td>Lorem Ipsum</td>
+                      <td><a href="https://www.lipsum.com/">https://www.lipsum.com/</a></td>
+                      <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium veritatis repudiandae, doloremque omnis laudantium eos atque similique et. Recusandae, labore...</td>
+                      <td class="text-center"><img src="../images/icon/top_world.svg" alt=""></td>
+                      <td class="text-center"><img src="/images/loremipsum.png" alt="" style="width: 10rem;"></td>
+                      <td><a href="#" class="btn btn-info m-1" data-toggle="modal" data-target="#editPostModal">Edit</a>
+                        <a href="#" class="btn btn-danger m-1" data-toggle="modal" data-target="#deleteModal">Delete</a></td>
+                    </tr>
+                    <tr>
+                      <td>Lorem Ipsum</td>
+                      <td><a href="https://www.lipsum.com/">https://www.lipsum.com/</a></td>
+                      <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium veritatis repudiandae, doloremque omnis laudantium eos atque similique et. Recusandae, labore...</td>
+                      <td class="text-center"><img src="../images/icon/top_world.svg" alt=""></td>
+                      <td class="text-center"><img src="/images/loremipsum.png" alt="" style="width: 10rem;"></td>
+                      <td><a href="#" class="btn btn-info m-1" data-toggle="modal" data-target="#editPostModal">Edit</a>
+                        <a href="#" class="btn btn-danger m-1" data-toggle="modal" data-target="#deleteModal">Delete</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Copyright &copy; Portalkan 2020</span>
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Logout Modal-->
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <a class="btn btn-primary" href="login.html">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Create Websites Modal-->
+  <div class="modal fade" id="createPostModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Create Website</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Name</label>
+              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Lorem Ipsum">
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Link</label>
+              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="https://www.lipsum.com/">
+            </div>
+            <div class="form-group">
+              <label for="ckeditor2">Description</label>
+              <textarea class="form-control" id="ckeditor2" rows="5" placeholder="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium veritatis repudiandae, doloremque omnis laudantium eos atque similique et. Recusandae, labore."></textarea>
+            </div>
+            <div class="form-group">
+              <div class="custom-file">
+                <input type="file" class="custom-file-input" id="customFile">
+                <label class="custom-file-label" for="customFile">logo-website.png</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="custom-file">
+                <input type="file" class="custom-file-input" id="customFile">
+                <label class="custom-file-label" for="customFile">thumbnail-website.png</label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <button class="btn btn-primary" type="button" data-dismiss="modal">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit Websites Modal-->
+  <div class="modal fade" id="editPostModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Edit Blog</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Name</label>
+              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Lorem Ipsum" value="Lorem Ipsum">
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Link</label>
+              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="https://www.lipsum.com/" value="https://www.lipsum.com/">
+            </div>
+            <div class="form-group">
+              <label for="ckeditor2">Description</label>
+              <textarea class="form-control" id="ckeditor2" rows="5" placeholder="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium veritatis repudiandae, doloremque omnis laudantium eos atque similique et. Recusandae, labore.">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non est erat. Vestibulum posuere, quam sit amet commodo posuere, ipsum tellus elementum dui, tempor efficitur odio arcu eu velit. Nunc hendrerit libero tortor, vel elementum nisi ultrices ac. Etiam pulvinar orci vel turpis pharetra, a pellentesque elit ultricies. Pellentesque pellentesque metus sed tellus luctus sodales a in enim. Phasellus accumsan odio ut nisi elementum, vel lobortis est ultricies. Quisque eleifend odio tortor. Fusce facilisis, felis a feugiat accumsan, lacus metus condimentum libero, consectetur porttitor arcu neque sit amet purus. Mauris sit amet orci ac urna tempus tempor. Nullam vel aliquam quam. Quisque nec euismod eros. Mauris consequat venenatis arcu eu auctor.
+
+                Nunc ligula nibh, fermentum a nulla non, ornare finibus nisi. Mauris luctus augue vel hendrerit ullamcorper. Fusce elit diam, egestas id purus ut, dictum aliquet metus. Sed gravida turpis at libero luctus, rhoncus maximus ante hendrerit. Quisque ac molestie turpis, porta ullamcorper dolor. Praesent eleifend semper tellus nec luctus. Duis elementum, nisl at commodo porta, magna augue molestie felis, sed faucibus nisi nisl congue metus. Fusce lacinia pretium augue non facilisis. Vestibulum felis odio, luctus ac magna vel, auctor maximus nulla. Aliquam et dolor nec dolor imperdiet fermentum. Aenean eleifend nunc sapien, ut egestas augue varius non. Etiam lobortis odio mauris, sit amet vulputate augue gravida eget. Proin tincidunt urna mi, id cursus est malesuada sed. Sed et viverra diam. Etiam ultricies tempus dui, quis ornare urna ullamcorper ut.</textarea>
+            </div>
+            <div class="form-group">
+              <div class="custom-file">
+                <input type="file" class="custom-file-input" id="customFile">
+                <label class="custom-file-label" for="customFile">logo-website.png</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="custom-file">
+                <input type="file" class="custom-file-input" id="customFile">
+                <label class="custom-file-label" for="customFile">thumbnail-website.png</label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <button class="btn btn-primary" type="button" data-dismiss="modal">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Delete Modal-->
+  <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Are you sure?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">Select "Delete" if you are sure to delete this item.</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <button class="btn btn-primary" type="button" data-dismiss="modal">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="../js/admin/sb-admin-2.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="../vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="../vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="../js/admin/demo/datatables-demo.js"></script>
+
+   <!-- Bootstrap 4 Browse File -->
+   <script type="application/javascript">
+    $('input[type="file"]').change(function(e){
+      var fileName = e.target.files[0].name;
+      $('.custom-file-label').html(fileName);
+    });
+  </script>
+
+</body>
+
+</html>

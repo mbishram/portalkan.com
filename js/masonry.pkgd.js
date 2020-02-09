@@ -1135,7 +1135,7 @@ proto.onotransitionend = function( event ) {
 };
 
 // properties that I munge to make my life easier
-var dashedVendorProperties = {
+var dashedvendorProperties = {
   '-webkit-transform': 'transform'
 };
 
@@ -1146,7 +1146,7 @@ proto.ontransitionend = function( event ) {
   }
   var _transition = this._transn;
   // get property name of transitioned property, convert to prefix-free
-  var propertyName = dashedVendorProperties[ event.propertyName ] || event.propertyName;
+  var propertyName = dashedvendorProperties[ event.propertyName ] || event.propertyName;
 
   // remove property that has completed transitioning
   delete _transition.ingProperties[ propertyName ];
